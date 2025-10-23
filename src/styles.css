@@ -1,0 +1,37 @@
+/* Stili globali minimi per la demo InforefClientDemo */
+:root{
+  --bg: #f5f7fa;
+  --sidebar-bg: linear-gradient(180deg,#1f2b38,#283644);
+  --accent: #2b90ff;
+  --muted: #999;
+  --card-bg: #ffffff;
+  --text: #0f1724;
+  --mono: "Inter", "Helvetica Neue", Arial, sans-serif;
+}
+
+*{box-sizing:border-box}
+html,body,#app{height:100%;margin:0;font-family:var(--mono);color:var(--text);background:var(--bg)}
+button{font-family:inherit}
+a{color:var(--accent);text-decoration:none}
+
+/* Layout helpers (usati dai componenti) */
+.demo-root{display:flex;height:100vh}
+.sidebar{width:320px;background:var(--sidebar-bg);color:#fff;padding:16px;box-sizing:border-box;display:flex;flex-direction:column}
+.main-area{flex:1;display:flex;flex-direction:column;padding:12px;box-sizing:border-box}
+
+/* Map / panels */
+.map-area{flex:1;border-radius:8px;overflow:hidden;box-shadow:0 6px 18px rgba(16,24,40,0.08)}
+.asset-panel{margin-top:12px;background:var(--card-bg);padding:12px;border-radius:8px}
+
+/* Small UI */
+.btn-row{display:flex;gap:8px}
+.btn-row button{flex:1;padding:8px;border-radius:6px;border:none;cursor:pointer;background:var(--accent);color:#fff}
+.kpi{margin-top:12px}
+.events{margin-top:14px;flex:1;overflow:auto}
+.events ul{list-style:none;padding:8px;background:rgba(255,255,255,0.03);border-radius:6px}
+.events li{font-size:12px;padding:6px 4px;border-bottom:1px dashed rgba(255,255,255,0.02)}
+.muted{color:var(--muted);font-size:12px}
+
+/* Modal basics */
+.camera-overlay, .qual-overlay { position: fixed; inset: 0; display:flex;align-items:center;justify-content:center; background: rgba(0,0,0,0.55); z-index:2000 }
+.camera-box, .qual-box { background: #fff; border-radius:8px; overflow:hidden; width:80%; max-width:900px; height:70%; max-height:700px; display:flex; flex-direction:column; }
