@@ -1,0 +1,8 @@
+import { defineConfig } from 'vite'
+import vue from '@vitejs/plugin-vue'
+
+export default defineConfig({
+  base: '/Inforef_DEMO/', // IMPORTANT: percorso del project site su GitHub Pages
+  plugins: [vue()],
+  // altre opzioni eventualmente presenti
+})
