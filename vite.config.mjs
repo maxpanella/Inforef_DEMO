@@ -1,11 +1,7 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-// https://vitejs.dev/config/
 export default defineConfig({
+  base: '/Inforef_DEMO/', // IMPORTANT: change to your repo name for GitHub Pages project site
   plugins: [vue()],
-  server: {
-    // se vuoi esporre il server anche in rete (opzionale)
-    host: true
-  }
 })
